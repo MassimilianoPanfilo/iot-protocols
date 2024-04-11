@@ -1,9 +1,11 @@
 ﻿using NetCoreClient.Sensors;
 using NetCoreClient.Protocols;
+using System.Security.Authentication.ExtendedProtection;
 
 // define sensors
 List<ISensor> sensors = new();
 sensors.Add(new VirtualSpeedSensor());
+sensors.Add(new VirtualPositionSensor());
 
 // define protocol
 IProtocol protocol = new Http("http://localhost:8011");
