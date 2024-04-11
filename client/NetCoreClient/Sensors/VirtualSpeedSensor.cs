@@ -28,5 +28,6 @@ namespace NetCoreClient.Sensors
 
             return json;
         }
+
     }
 }

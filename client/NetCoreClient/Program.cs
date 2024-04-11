@@ -1,36 +1,26 @@
 ﻿using NetCoreClient.Sensors;
 using NetCoreClient.Protocols;
-using Newtonsoft.Json;
+using System;
+using System.Collections.Generic;
+using System.Threading;
+using System.Threading.Tasks;
+using System.Text.Json;
 
-// define sensors
-List<ISensor> sensors = new();
-sensors.Add(new VirtualSpeedSensor());
-sensors.Add(new VirtualPositionSensor());
-
-// define protocol
-IProtocol protocol = new Http("http://localhost:8011");
-
-// send data to server
-while (true)
+// Define sensors
+List<ISensor> sensors = new()
 {
-    // Creare un oggetto dictionary per accumulare i dati da tutti i sensori
-    Dictionary<string, object> sensorData = new Dictionary<string, object>();
+    new VirtualSpeedSensor(),
+    new VirtualPositionSensor()
+};
 
-    foreach (ISensor sensor in sensors)
-    {
-        // Convertire i dati del sensore in JSON e aggiungerli al dictionary
-        var data = sensor.ToJson();
-        
-        sensorData[sensor.GetType().Name] = data;
-    }
+string endpoint = "http://localhost:8011";
+// Crea un'istanza di Http fornendo l'endpoint e la lista di sensori
+IProtocol protocol = new Http(endpoint, sensors);
 
-    // Convertire il dictionary in una stringa JSON
-    string json = JsonConvert.SerializeObject(sensorData);
+// Invia i dati al server
+await protocol.Send("Dati da inviare al server: ");
 
-    // Inviare i dati unificati al server
-    protocol.Send(json);
-
-    Console.WriteLine("Data sent: " + json);
+Console.WriteLine("Data sent: ");
 
     Thread.Sleep(1000);
-}
+

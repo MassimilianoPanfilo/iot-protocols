@@ -5,7 +5,7 @@ namespace NetCoreClient.Sensors
 {
     public class VirtualPositionSensor : IPositionSensor, ISensor
     {
-        private readonly Random Random = new Random();
+        private readonly Random Random = new();
 
         // Implementazione delle proprietà X, Y, Z
         public int X { get { return Random.Next(-100, 100); } }
@@ -16,19 +16,25 @@ namespace NetCoreClient.Sensors
         {
 
         }
-        public string GetPosition()
+        public string GetPosition(int X, int Y, int Z)
         {
-            VirtualPositionSensor positionSensor = new VirtualPositionSensor();
-            string PositionSensor = positionSensor.ToString();
-            return PositionSensor;
+            
+            string position = "X: " + X.ToString() + ", Y: " + Y.ToString() + ", Z: " + Z.ToString();
+            //string position = ToJson(); // Ottieni la rappresentazione JSON della posizione dal sensore
+            return position; // Restituisci la posizione come stringa JSON
         }
 
-        // Implementazione di un metodo ToJson di esempio
-        public string ToJson()//string position
+
+
+        // Implementazione di un metodo ToJson
+        public string ToJson()
         {
-            string PositionSensorJson = JsonSerializer.Serialize(GetPosition());
-            return PositionSensorJson;
+            // Ottieni la rappresentazione JSON della posizione direttamente dal sensore di posizione
+            string json = JsonSerializer.Serialize(GetPosition(); // Serializza un oggetto anonimo con le coordinate X, Y e Z
+
+            return json; // Restituisci la rappresentazione JSON della posizione
         }
+
 
     }
 }

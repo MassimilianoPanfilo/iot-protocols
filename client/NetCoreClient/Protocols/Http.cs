@@ -1,35 +1,39 @@
 ﻿using NetCoreClient.Sensors;
 using NetCoreClient.ValueObjects;
-
+using System;
+using System.Net.Http;
+using System.Text.Json;
+using System.Threading.Tasks;
 
 namespace NetCoreClient.Protocols
 {
     class Http : IProtocol
     {
-        private string Endpoint;
-        //private HttpWebRequest httpWebRequest;
+        private readonly string Endpoint;
 
+        public ISensor Sensors { get; }
+        private readonly List<ISensor> sensors;
 
-        public Http(string endpoint)
+        private readonly HttpClient client = new();
+        
+
+        public Http(string endpoint, List<ISensor> sensors)
         {
-            this.Endpoint = endpoint;
+            Endpoint = endpoint;
+            this.sensors = sensors;
         }
 
-        //EndPoint endPoint = new EndPoint("192.168.101.148");
-
-        //position e speed devono coincidere con i metodi nelle loro classi /virtualsensor../ ed essere agglomerati per fare il messaggio da inviare
-        public async void Send(string data)
+        public async Task Send(string json)
         {
-            var client = new HttpClient();
+            //var dataSensorsToJson = Sensors.ToJson();
+            json = JsonSerializer.Serialize(Sensors.ToJson);
 
-            ISensor sensor = null;   ////aaaaaaaaadevo prendere i valori json dai sensori
-            data = sensor.ToJson(); ////aaaaaaaaa  e caricarli in data per inviare il messaggio
-
-            var result = await client.PostAsync(Endpoint, new StringContent(data));
+            var result = await client.PostAsync(Endpoint, new StringContent(json));
 
             Console.Out.WriteLine(result.StatusCode);
         }
 
-        
+       
     }
 }
+
