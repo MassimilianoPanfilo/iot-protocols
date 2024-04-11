@@ -16,7 +16,7 @@ namespace NetCoreClient.Protocols
         {
             var client = new HttpClient();
 
-            var result = await client.PostAsync(Endpoint, new StringContent(data));
+            var result = await client.PostAsync(Endpoint, new StringContent(data, System.Text.Encoding.UTF8, "application/json"));
 
             Console.Out.WriteLine(result.StatusCode);
         }
