@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "p5xbMETW+IfKDW2UQ6LZWI6xIHZ9d170B0VT7imSmx/ygdCgTUd1mwKqQdgPPn+dR+b8OdrjE3lMRbjFn2oXMQ==",
+  "dgSpecHash": "1FtYVzzHDmjGRxOjSSZKGMCq+yrTz2NoixPaS1KLlnQ9FopY1UH01JMbc+3JDVEtYf+MYvu18+imWWIrTCzsdg==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Utente\\Desktop\\Secondo Anno\\PROTOCOLLI-IOT\\Progetto 1\\iot-protocols\\client\\NetCoreClient\\NetCoreClient.csproj",
+  "projectFilePath": "C:\\Users\\Utente\\Documents\\Protocolli IoT\\Progetto 1\\iot-protocols\\client\\NetCoreClient\\NetCoreClient.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Utente\\.nuget\\packages\\microsoft.extensions.configuration\\6.0.0\\microsoft.extensions.configuration.6.0.0.nupkg.sha512",
     "C:\\Users\\Utente\\.nuget\\packages\\microsoft.extensions.configuration.abstractions\\6.0.0\\microsoft.extensions.configuration.abstractions.6.0.0.nupkg.sha512",
