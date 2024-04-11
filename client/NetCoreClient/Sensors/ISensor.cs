@@ -1,6 +1,6 @@
 ﻿namespace NetCoreClient.Sensors
 {
-    interface ISensorInterface
+    interface ISensor
     {
         string ToJson();
     }

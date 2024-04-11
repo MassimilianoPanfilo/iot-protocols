@@ -6,10 +6,8 @@ using System.Threading.Tasks;
 
 namespace NetCoreClient.Sensors
 {
-    internal interface IPositionSensorInterface
+    internal interface IPositionSensor
     {
-        int X { get; }
-        int Y { get; }
-        int Z { get; }
+        string GetPosition();
     }
 }

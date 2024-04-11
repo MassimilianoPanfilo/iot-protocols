@@ -3,23 +3,30 @@ using System.Text.Json;
 
 namespace NetCoreClient.Sensors
 {
-    class VirtualSpeedSensor : ISpeedSensorInterface, ISensorInterface
+    class VirtualSpeedSensor : ISpeedSensor, ISensor
     {
         private readonly Random Random;
+        public int Speed => Random.Next(100); // Proprietà Speed come propietà di sola lettura
 
         public VirtualSpeedSensor()
         {
-            Random = new Random();
+            Random = new Random(); // Inizializzazione corretta del campo Random
         }
 
-        public int Speed()
+        public int GetSpeed()
         {
-            return new Speed(Random.Next(100)).Value;
+            return Speed;
         }
 
         public string ToJson()
         {
-            return JsonSerializer.Serialize(Speed());
+            // Creazione di un oggetto anonimo per rappresentare il valore della velocità
+            var speedObject = new { speed = Speed }; // Utilizzo della proprietà Speed invece della variabile locale speed
+
+            // Serializzazione dell'oggetto anonimo in formato JSON
+            string json = JsonSerializer.Serialize(speedObject);
+
+            return json;
         }
     }
 }

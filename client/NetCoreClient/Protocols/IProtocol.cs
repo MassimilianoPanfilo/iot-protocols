@@ -5,8 +5,8 @@ using System.Text;
 
 namespace NetCoreClient.Protocols
 {
-    interface ProtocolInterface
+    interface IProtocol
     {
-        void Send(string data);
+        void Send(string json);
     }
 }

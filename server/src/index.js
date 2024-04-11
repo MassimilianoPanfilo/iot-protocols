@@ -12,9 +12,6 @@ app.use(express.json())
 //app.use('/value', valueRouter) //quando vai su /position utilizzi i file di positionRouter
 
 
-// Middleware per il parsing del corpo delle richieste
-// app.use(bodyParser.json());
-// app.use(bodyParser.urlencoded({ extended: true }));
 
 // Rotta per il metodo GET
 app.get('/', (req, res) => {
@@ -24,12 +21,13 @@ app.get('/', (req, res) => {
 
 // Rotta per il metodo POST
 app.post('/', (req, res) => {
-    // Qui puoi gestire la logica per elaborare la richiesta POST
-    const datiRicevuti = req.body;
-    // Esempio di elaborazione: stampare i dati ricevuti
+    console.log('Body della richiesta:', req.body);
+    const datiRicevuti = req.body["Data sent"];
     console.log('Dati ricevuti:', datiRicevuti);
-    res.send('Risposta per la richiesta POST');
+    res.json({ message: 'Dati ricevuti correttamente', data: datiRicevuti });
 });
+
+
 
 
 // avvio il server

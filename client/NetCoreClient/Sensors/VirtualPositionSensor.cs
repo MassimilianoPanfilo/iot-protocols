@@ -3,7 +3,7 @@ using System.Text.Json;
 
 namespace NetCoreClient.Sensors
 {
-    public class VirtualPositionSensor : IPositionSensorInterface, ISensorInterface
+    public class VirtualPositionSensor : IPositionSensor, ISensor
     {
         private readonly Random Random = new Random();
 
@@ -14,13 +14,21 @@ namespace NetCoreClient.Sensors
 
         public VirtualPositionSensor()
         {
+
+        }
+        public string GetPosition()
+        {
+            VirtualPositionSensor positionSensor = new VirtualPositionSensor();
+            string PositionSensor = positionSensor.ToString();
+            return PositionSensor;
         }
 
         // Implementazione di un metodo ToJson di esempio
-        public string ToJson()
+        public string ToJson()//string position
         {
-            var position = new Position(X, Y, Z);
-            return JsonSerializer.Serialize(position);
+            string PositionSensorJson = JsonSerializer.Serialize(GetPosition());
+            return PositionSensorJson;
         }
+
     }
 }
