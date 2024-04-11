@@ -8,7 +8,8 @@ sensors.Add(new VirtualSpeedSensor());
 sensors.Add(new VirtualPositionSensor());
 
 // define protocol
-IProtocol protocol = new Http("http://localhost:8011");
+//IProtocol protocol = new Http("http://localhost:8011");
+IProtocol protocol = new Mqtt("127.0.0.1");
 
 // send data to server
 while (true)
