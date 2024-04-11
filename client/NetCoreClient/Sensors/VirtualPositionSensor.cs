@@ -16,9 +16,8 @@ namespace NetCoreClient.Sensors
         {
 
         }
-        public string GetPosition(int X, int Y, int Z)
+        public string GetPosition()
         {
-            
             string position = "X: " + X.ToString() + ", Y: " + Y.ToString() + ", Z: " + Z.ToString();
             //string position = ToJson(); // Ottieni la rappresentazione JSON della posizione dal sensore
             return position; // Restituisci la posizione come stringa JSON
@@ -30,7 +29,7 @@ namespace NetCoreClient.Sensors
         public string ToJson()
         {
             // Ottieni la rappresentazione JSON della posizione direttamente dal sensore di posizione
-            string json = JsonSerializer.Serialize(GetPosition(); // Serializza un oggetto anonimo con le coordinate X, Y e Z
+            string json = JsonSerializer.Serialize(GetPosition()); // Serializza un oggetto anonimo con le coordinate X, Y e Z
 
             return json; // Restituisci la rappresentazione JSON della posizione
         }

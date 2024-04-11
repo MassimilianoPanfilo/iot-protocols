@@ -8,6 +8,4 @@ build_property.PlatformNeutralAssembly =
 build_property.EnforceExtendedAnalyzerRules = 
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = NetCoreClient
-build_property.ProjectDir = C:\Users\Utente\Documents\Protocolli IoT\Progetto 1\iot-protocols\client\NetCoreClient\
-build_property.EnableComHosting = 
-build_property.EnableGeneratedComInterfaceComImportInterop = 
+build_property.ProjectDir = C:\Users\Utente\Desktop\Secondo Anno\PROTOCOLLI-IOT\Progetto 1\iot-protocols\client\NetCoreClient\

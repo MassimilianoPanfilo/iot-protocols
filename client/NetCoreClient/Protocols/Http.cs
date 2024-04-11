@@ -1,39 +1,24 @@
-﻿using NetCoreClient.Sensors;
-using NetCoreClient.ValueObjects;
-using System;
-using System.Net.Http;
-using System.Text.Json;
-using System.Threading.Tasks;
+﻿using System.Net;
 
 namespace NetCoreClient.Protocols
 {
     class Http : IProtocol
     {
-        private readonly string Endpoint;
+        private string Endpoint;
+        //private HttpWebRequest httpWebRequest;
 
-        public ISensor Sensors { get; }
-        private readonly List<ISensor> sensors;
-
-        private readonly HttpClient client = new();
-        
-
-        public Http(string endpoint, List<ISensor> sensors)
+        public Http(string endpoint)
         {
-            Endpoint = endpoint;
-            this.sensors = sensors;
+            this.Endpoint = endpoint;
         }
 
-        public async Task Send(string json)
+        public async void Send(string data)
         {
-            //var dataSensorsToJson = Sensors.ToJson();
-            json = JsonSerializer.Serialize(Sensors.ToJson);
+            var client = new HttpClient();
 
-            var result = await client.PostAsync(Endpoint, new StringContent(json));
+            var result = await client.PostAsync(Endpoint, new StringContent(data));
 
             Console.Out.WriteLine(result.StatusCode);
         }
-
-       
     }
 }
-

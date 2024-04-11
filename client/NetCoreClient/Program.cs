@@ -1,26 +1,25 @@
 ﻿using NetCoreClient.Sensors;
 using NetCoreClient.Protocols;
-using System;
-using System.Collections.Generic;
-using System.Threading;
-using System.Threading.Tasks;
-using System.Text.Json;
 
-// Define sensors
-List<ISensor> sensors = new()
+// define sensors
+List<ISensor> sensors = new();
+sensors.Add(new VirtualSpeedSensor());
+
+// define protocol
+IProtocol protocol = new Http("http://localhost:8011");
+
+// send data to server
+while (true)
 {
-    new VirtualSpeedSensor(),
-    new VirtualPositionSensor()
-};
+    foreach (ISensor sensor in sensors)
+    {
+        var sensorValue = sensor.ToJson();
 
-string endpoint = "http://localhost:8011";
-// Crea un'istanza di Http fornendo l'endpoint e la lista di sensori
-IProtocol protocol = new Http(endpoint, sensors);
+        protocol.Send(sensorValue);
 
-// Invia i dati al server
-await protocol.Send("Dati da inviare al server: ");
+        Console.WriteLine("Data sent: " + sensorValue);
 
-Console.WriteLine("Data sent: ");
+        Thread.Sleep(1000);
+    }
 
-    Thread.Sleep(1000);
-
+}
