@@ -1,6 +1,5 @@
 ﻿using NetCoreClient.Sensors;
 using NetCoreClient.Protocols;
-using System.Security.Authentication.ExtendedProtection;
 
 // define sensors
 List<ISensor> sensors = new();
@@ -8,8 +7,8 @@ sensors.Add(new VirtualSpeedSensor());
 sensors.Add(new VirtualPositionSensor());
 
 // define protocol
-//IProtocol protocol = new Http("http://localhost:8011");
-IProtocol protocol = new Mqtt("127.0.0.1");
+//IProtocolInterface protocol = new Http("http://localhost:8011/cars/123");
+IProtocol protocol = new Mqtt("test.mosquitto.org");
 
 // send data to server
 while (true)
@@ -18,7 +17,7 @@ while (true)
     {
         var sensorValue = sensor.ToJson();
 
-        protocol.Send(sensorValue);
+        protocol.Send(sensorValue, sensor.GetSlug());
 
         Console.WriteLine("Data sent: " + sensorValue);
 

@@ -1,0 +1,22 @@
+# @host=http://localhost:8011/items
+
+# ###
+
+# GET {{host}}
+
+# ###
+
+# @host=http://localhost:8011/items/post
+
+# ###
+
+# POST {{host}}
+
+# @host=http://localhost:8011/items/delete/:id
+
+# ###
+
+# DELETE {{host}}
+
+# ###
+

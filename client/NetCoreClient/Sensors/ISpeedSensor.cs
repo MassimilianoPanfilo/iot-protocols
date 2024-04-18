@@ -1,6 +1,6 @@
 ﻿namespace NetCoreClient.Sensors
 {
-    internal interface ISpeedSensor
+    interface ISpeedSensor
     {
         int GetSpeed();
     }

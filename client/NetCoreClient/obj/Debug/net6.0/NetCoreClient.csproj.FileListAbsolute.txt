@@ -99,3 +99,4 @@ C:\Users\Utente\Desktop\Secondo Anno\PROTOCOLLI-IOT\Progetto 1\iot-protocols\cli
 C:\Users\Utente\Desktop\Secondo Anno\PROTOCOLLI-IOT\Progetto 1\iot-protocols\client\NetCoreClient\obj\Debug\net6.0\NetCoreClient.pdb
 C:\Users\Utente\Desktop\Secondo Anno\PROTOCOLLI-IOT\Progetto 1\iot-protocols\client\NetCoreClient\obj\Debug\net6.0\NetCoreClient.genruntimeconfig.cache
 C:\Users\Utente\Desktop\Secondo Anno\PROTOCOLLI-IOT\Progetto 1\iot-protocols\client\NetCoreClient\obj\Debug\net6.0\ref\NetCoreClient.dll
+C:\Users\Utente\Desktop\Secondo Anno\PROTOCOLLI-IOT\Progetto 1\iot-protocols\client\NetCoreClient\bin\Debug\net6.0\MQTTnet.dll
