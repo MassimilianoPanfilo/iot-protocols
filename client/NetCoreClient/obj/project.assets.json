@@ -597,11 +597,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Utente\\Desktop\\Secondo Anno\\PROTOCOLLI-IOT\\Progetto 1\\iot-protocols\\client\\NetCoreClient\\NetCoreClient.csproj",
+      "projectUniqueName": "C:\\Users\\Utente\\Documents\\Protocolli IoT\\Progetto 1\\iot-protocols\\client\\NetCoreClient\\NetCoreClient.csproj",
       "projectName": "NetCoreClient",
-      "projectPath": "C:\\Users\\Utente\\Desktop\\Secondo Anno\\PROTOCOLLI-IOT\\Progetto 1\\iot-protocols\\client\\NetCoreClient\\NetCoreClient.csproj",
+      "projectPath": "C:\\Users\\Utente\\Documents\\Protocolli IoT\\Progetto 1\\iot-protocols\\client\\NetCoreClient\\NetCoreClient.csproj",
       "packagesPath": "C:\\Users\\Utente\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Utente\\Desktop\\Secondo Anno\\PROTOCOLLI-IOT\\Progetto 1\\iot-protocols\\client\\NetCoreClient\\obj\\",
+      "outputPath": "C:\\Users\\Utente\\Documents\\Protocolli IoT\\Progetto 1\\iot-protocols\\client\\NetCoreClient\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Utente\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -624,6 +624,11 @@
         "warnAsError": [
           "NU1605"
         ]
+      },
+      "restoreAuditProperties": {
+        "enableAudit": "true",
+        "auditLevel": "low",
+        "auditMode": "direct"
       }
     },
     "frameworks": {
@@ -659,16 +664,8 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.202\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.202\\RuntimeIdentifierGraph.json"
       }
     }
-  },
-  "logs": [
-    {
-      "code": "Undefined",
-      "level": "Warning",
-      "warningLevel": 1,
-      "message": "Problem reading the cache file C:\\Users\\Utente\\Desktop\\Secondo Anno\\PROTOCOLLI-IOT\\Progetto 1\\iot-protocols\\client\\NetCoreClient\\obj\\project.nuget.cache : Invalid property identifier character: <. Path 'version', line 3, position 0."
-    }
-  ]
+  }
 }

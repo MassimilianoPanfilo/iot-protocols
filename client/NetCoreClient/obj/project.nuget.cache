@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "0MbMTxE9RNEcaqcdS2DVfzzYHjFP4DnXjnPOLFNPa7FFGfpjXtP6LagpY4p9MKGte7lQowGAcUMlbJJb8dlarQ==",
+  "dgSpecHash": "HldjccDnxVc5NVm61GpR6SDzuJFDuJ1RcCQDXo/u70FUvvZEkrwtS9bMePVV3UJaGX7mzVKsc7shmapZZNniMA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Utente\\Desktop\\Secondo Anno\\PROTOCOLLI-IOT\\Progetto 1\\iot-protocols\\client\\NetCoreClient\\NetCoreClient.csproj",
+  "projectFilePath": "C:\\Users\\Utente\\Documents\\Protocolli IoT\\Progetto 1\\iot-protocols\\client\\NetCoreClient\\NetCoreClient.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Utente\\.nuget\\packages\\microsoft.extensions.configuration\\6.0.0\\microsoft.extensions.configuration.6.0.0.nupkg.sha512",
     "C:\\Users\\Utente\\.nuget\\packages\\microsoft.extensions.configuration.abstractions\\6.0.0\\microsoft.extensions.configuration.abstractions.6.0.0.nupkg.sha512",
@@ -18,12 +18,5 @@
     "C:\\Users\\Utente\\.nuget\\packages\\system.text.encodings.web\\6.0.0\\system.text.encodings.web.6.0.0.nupkg.sha512",
     "C:\\Users\\Utente\\.nuget\\packages\\system.text.json\\6.0.0\\system.text.json.6.0.0.nupkg.sha512"
   ],
-  "logs": [
-    {
-      "code": "Undefined",
-      "level": "Warning",
-      "warningLevel": 1,
-      "message": "Problem reading the cache file C:\\Users\\Utente\\Desktop\\Secondo Anno\\PROTOCOLLI-IOT\\Progetto 1\\iot-protocols\\client\\NetCoreClient\\obj\\project.nuget.cache : Invalid property identifier character: <. Path 'version', line 3, position 0."
-    }
-  ]
+  "logs": []
 }

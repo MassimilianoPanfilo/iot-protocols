@@ -25,7 +25,7 @@ const path = require('path')
         path.join(
         __dirname, 
         '../db', 
-        'db.db'
+        'db2.db'
     ))
 
     // Creazione dell'app Express
@@ -37,18 +37,28 @@ const path = require('path')
     app.use(bodyParser.json());
 
     // Logica per la gestione dei messaggi ricevuti dal broker MQTT
-    client.on('message', function (topic, message) {
+    client.on('message', function (topic, messageJSON) {
         console.log('Messaggio ricevuto:');
         console.log('TOPIC: ' + topic);
-        console.log('MESSAGE: ' + message.toString());
-
+    
+        // Dividi la stringa in base al carattere '/'
+        const parts = topic.split('/');
+        // Ottieni l'ultima parola (ultimo elemento dell'array)
+        const nameSensor = parts[parts.length - 1];
+    
+        // Converti il messaggio JSON in una stringa
+        const stringaMessage = messageJSON.toString();
+        // Rimuovi i paragrafi e gli apostrofi dalla stringa JSON
+        const cleanMessage = stringaMessage.replace(/[\n\r'"{}]/g, '');
+        console.log('MESSAGE: ' + cleanMessage + ' , SENSOR: ' + nameSensor);
+    
         // Ottenere la data corrente
         const currentDate = new Date();
-
         // Formattazione della data nel formato desiderato (ad esempio, YYYY-MM-DD HH:MM:SS)
         const formattedDate = currentDate.toISOString().slice(0, 19).replace('T', ' ');
+    
         // Inserimento del messaggio nel database SQLite
-        db.run("INSERT INTO items (body, date) VALUES ($body, $date)", {$body:message.toString(), $date:formattedDate}, function (err) {
+        db.run("INSERT INTO items (body, date, sensor) VALUES ($body, $date, $sensor)", {$body: cleanMessage, $date: formattedDate, $sensor: nameSensor}, function (err) {
             if (err) {
                 console.error('Errore durante l\'inserimento del messaggio nel database:', err);
             } else {
@@ -56,6 +66,7 @@ const path = require('path')
             }
         });
     });
+    
 
     // Avvio del server Express
     const port = 8011;
