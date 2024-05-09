@@ -6,22 +6,20 @@ using System.Text.Json;
 List<ISensor> sensors = new();
 sensors.Add(new VirtualSpeedSensor());
 
-// define protocol
-IProtocol protocol = new Http("http://localhost:8011/car");
+// Definizione del protocollo HTTP con l'endpoint del server
+IProtocol protocol = new Http("http://localhost:8011");
 
-// send data to server
+// Esempio di invio di dati ogni secondo utilizzando un sensore
 while (true)
 {
+    var sensor = new VirtualSpeedSensor(); // Utilizza il tuo sensore virtuale
     
-    foreach (ISensor sensor in sensors)
-    {
-        var sensorValue = sensor.ToJson();
+    string jsonData = sensor.ToJson(); // Ottieni i dati come JSON
 
-        protocol.Send(sensorValue);
+    Console.WriteLine($"Dati inviati: {jsonData}");
+    // Invia i dati al server utilizzando il protocollo HTTP definito
+    await protocol.Send(jsonData);
 
-        Console.WriteLine("Data sent: " + sensorValue);
-
-        Thread.Sleep(1000);
-    }
-
+    // Attendere 1 secondo prima di inviare il prossimo dato
+    await Task.Delay(1000);
 }

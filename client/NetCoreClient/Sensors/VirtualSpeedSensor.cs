@@ -19,7 +19,11 @@ namespace NetCoreClient.Sensors
 
         public string ToJson()
         {
-            return JsonSerializer.Serialize(Speed());
+            int currentSpeed = Speed();
+            DateTime date = DateTime.Now;
+            string formattedDate = date.ToString("dd/MM/yyyy HH:mm");
+            return JsonSerializer.Serialize(new { speed = currentSpeed , date = formattedDate });
         }
+
     }
 }
