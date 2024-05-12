@@ -27,10 +27,10 @@ app.post('/', (req, res) => {
   console.log('Dati ricevuti:', data);
 
   // Inserimento dei dati nel database
-  const { value, date } = data; // Supponiamo che i dati contengano campi 'field1' e 'field2'
-  const insertQuery = `INSERT INTO items (value, date) VALUES (value, date)`;
+  const { sensor, value, datetime } = data; // Supponiamo che i dati contengano campi 'value' e 'date'
+  const insertQuery = `INSERT INTO items (sensor, value, datetime) VALUES (?, ?, ?)`;
 
-  db.run(insertQuery, [value, date], function(err) {
+  db.run(insertQuery, [sensor, value, datetime], function(err) {
     if (err) {
       console.error('Errore durante l\'inserimento dei dati nel database:', err.message);
       res.status(500).send('Errore durante l\'inserimento dei dati nel database');
