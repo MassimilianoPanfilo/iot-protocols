@@ -1,0 +1,127 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\Utente\\Documents\\Protocolli IoT\\Protocols\\iot-protocols\\AMQP - RabbitMQ\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{84DADAFB-E999-4A8E-B69F-9A416F44EBFF}|SubscriberMQ\\SubscriberMQ.csproj|c:\\users\\utente\\documents\\protocolli iot\\protocols\\iot-protocols\\amqp - rabbitmq\\subscribermq\\subscriber.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{84DADAFB-E999-4A8E-B69F-9A416F44EBFF}|SubscriberMQ\\SubscriberMQ.csproj|solutionrelative:subscribermq\\subscriber.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{03A1283A-2F43-4C35-A120-46E2C4BFD7CE}|PublisherMQ\\PublisherMQ.csproj|c:\\users\\utente\\documents\\protocolli iot\\protocols\\iot-protocols\\amqp - rabbitmq\\publishermq\\publisher.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{03A1283A-2F43-4C35-A120-46E2C4BFD7CE}|PublisherMQ\\PublisherMQ.csproj|solutionrelative:publishermq\\publisher.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{03A1283A-2F43-4C35-A120-46E2C4BFD7CE}|PublisherMQ\\PublisherMQ.csproj|c:\\users\\utente\\documents\\protocolli iot\\protocols\\iot-protocols\\amqp - rabbitmq\\publishermq\\speed.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{03A1283A-2F43-4C35-A120-46E2C4BFD7CE}|PublisherMQ\\PublisherMQ.csproj|solutionrelative:publishermq\\speed.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{03A1283A-2F43-4C35-A120-46E2C4BFD7CE}|PublisherMQ\\PublisherMQ.csproj|c:\\users\\utente\\documents\\protocolli iot\\protocols\\iot-protocols\\amqp - rabbitmq\\publishermq\\virtualspeedsensor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{03A1283A-2F43-4C35-A120-46E2C4BFD7CE}|PublisherMQ\\PublisherMQ.csproj|solutionrelative:publishermq\\virtualspeedsensor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Utente\\AppData\\Roaming\\Microsoft\\UserSecrets\\214d59d3-ce12-421c-909d-5256846aae09\\secrets.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 1004,
+          "SelectedChildIndex": 3,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "VirtualSpeedSensor.cs",
+              "DocumentMoniker": "C:\\Users\\Utente\\Documents\\Protocolli IoT\\Protocols\\iot-protocols\\AMQP - RabbitMQ\\PublisherMQ\\VirtualSpeedSensor.cs",
+              "RelativeDocumentMoniker": "PublisherMQ\\VirtualSpeedSensor.cs",
+              "ToolTip": "C:\\Users\\Utente\\Documents\\Protocolli IoT\\Protocols\\iot-protocols\\AMQP - RabbitMQ\\PublisherMQ\\VirtualSpeedSensor.cs",
+              "RelativeToolTip": "PublisherMQ\\VirtualSpeedSensor.cs",
+              "ViewState": "AQIAAAMAAAAAAAAAAAAAABUAAAAJAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-15T10:49:34.982Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Speed.cs",
+              "DocumentMoniker": "C:\\Users\\Utente\\Documents\\Protocolli IoT\\Protocols\\iot-protocols\\AMQP - RabbitMQ\\PublisherMQ\\Speed.cs",
+              "RelativeDocumentMoniker": "PublisherMQ\\Speed.cs",
+              "ToolTip": "C:\\Users\\Utente\\Documents\\Protocolli IoT\\Protocols\\iot-protocols\\AMQP - RabbitMQ\\PublisherMQ\\Speed.cs",
+              "RelativeToolTip": "PublisherMQ\\Speed.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABEAAAAFAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-15T10:48:33.154Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "secrets.json",
+              "DocumentMoniker": "C:\\Users\\Utente\\AppData\\Roaming\\Microsoft\\UserSecrets\\214d59d3-ce12-421c-909d-5256846aae09\\secrets.json",
+              "RelativeDocumentMoniker": "..\\..\\..\\..\\..\\AppData\\Roaming\\Microsoft\\UserSecrets\\214d59d3-ce12-421c-909d-5256846aae09\\secrets.json",
+              "ToolTip": "C:\\Users\\Utente\\AppData\\Roaming\\Microsoft\\UserSecrets\\214d59d3-ce12-421c-909d-5256846aae09\\secrets.json",
+              "RelativeToolTip": "..\\..\\..\\..\\..\\AppData\\Roaming\\Microsoft\\UserSecrets\\214d59d3-ce12-421c-909d-5256846aae09\\secrets.json",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAEAAAAUAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2024-05-15T09:40:17.066Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Subscriber.cs",
+              "DocumentMoniker": "C:\\Users\\Utente\\Documents\\Protocolli IoT\\Protocols\\iot-protocols\\AMQP - RabbitMQ\\SubscriberMQ\\Subscriber.cs",
+              "RelativeDocumentMoniker": "SubscriberMQ\\Subscriber.cs",
+              "ToolTip": "C:\\Users\\Utente\\Documents\\Protocolli IoT\\Protocols\\iot-protocols\\AMQP - RabbitMQ\\SubscriberMQ\\Subscriber.cs",
+              "RelativeToolTip": "SubscriberMQ\\Subscriber.cs",
+              "ViewState": "AQIAABcAAAAAAAAAAAAqwCYAAAAmAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-15T09:22:37.057Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Publisher.cs",
+              "DocumentMoniker": "C:\\Users\\Utente\\Documents\\Protocolli IoT\\Protocols\\iot-protocols\\AMQP - RabbitMQ\\PublisherMQ\\Publisher.cs",
+              "RelativeDocumentMoniker": "PublisherMQ\\Publisher.cs",
+              "ToolTip": "C:\\Users\\Utente\\Documents\\Protocolli IoT\\Protocols\\iot-protocols\\AMQP - RabbitMQ\\PublisherMQ\\Publisher.cs",
+              "RelativeToolTip": "PublisherMQ\\Publisher.cs",
+              "ViewState": "AQIAAB0AAAAAAAAAAAAQwC0AAAAiAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-15T09:22:34.552Z",
+              "EditorCaption": ""
+            }
+          ]
+        },
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": -1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{d78612c7-9962-4b83-95d9-268046dad23a}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
+            }
+          ]
+        },
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": -1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{a80febb4-e7e0-4147-b476-21aaf2453969}"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
